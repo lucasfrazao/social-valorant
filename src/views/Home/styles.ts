@@ -1,48 +1,49 @@
 import styled from 'styled-components'
-import Button from '@material-ui/core/Button'
-import backgroundImage from '../../assets/img/background_home.png'
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 
-  width: auto;
-  height: 100vh;
-  padding-left: 1.75rem;
-  padding-top: 1.75rem;
-  padding-right: 1.75rem;
+  .welcome {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 
-  background-image: url(${backgroundImage});
-  background-size: cover;
+    h6 {
+      width: 110%;
+      color: #fffbf5;
+    }
 
-  img {
-    width: 100vw;
-    height: auto;
-    padding: 1.75rem;
+    .status-app {
+      text-align: end;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      p {
+        color: #fffbf5;
+        opacity: 0.5;
+      }
+
+      svg {
+        width: 1rem;
+        fill: green;
+      }
+    }
   }
 
-  p {
-    font-family: 'Poppins';
-    font-size: 1.5rem;
-    line-height: 3.4rem;
+  h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
-    margin-top: 3.125rem;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
     color: #fffbf5;
   }
-`
-
-export const MuiButton = styled(Button)`
-  margin-top: 2.12rem;
-  width: 90vw;
-  height: 3.38rem;
-
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  border-radius: 0.188rem;
-  background-color: #ff4655 !important;
-  color: #f5f4ed !important;
-
-  cursor: pointer;
 `
