@@ -12,4 +12,9 @@ export const Container = styled.div`
     text-transform: uppercase;
     color: #fffbf5;
   }
+
+  .MuiPaper-root {
+    background-size: cover;
+    background-position: top;
+  }
 `

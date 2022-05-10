@@ -14,8 +14,8 @@ export const PaperMui = styled(Paper)<CardSimpleProps>`
   display: flex;
   align-items: flex-end;
 
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 
   background-image: linear-gradient(
       0deg,
