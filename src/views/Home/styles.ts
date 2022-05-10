@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '@material-ui/core/Button'
 import backgroundImage from '../../assets/img/background_home.png'
 
 export const Container = styled.div`
@@ -32,7 +33,7 @@ export const Container = styled.div`
   }
 `
 
-export const Button = styled.button`
+export const MuiButton = styled(Button)`
   margin-top: 2.12rem;
   width: 90vw;
   height: 3.38rem;
@@ -40,14 +41,8 @@ export const Button = styled.button`
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   border-radius: 0.188rem;
-  background-color: #000000;
-  color: #f5f4ed;
+  background-color: #ff4655 !important;
+  color: #f5f4ed !important;
 
   cursor: pointer;
-
-  :hover {
-    border: none;
-    background-color: #242424;
-    transition: 0.2s;
-  }
 `

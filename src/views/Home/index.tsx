@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Button } from './styles'
+import { Container, MuiButton } from './styles'
 import logo from '../../assets/img/valorant_logo.svg'
 
 const Home: React.FC = () => {
@@ -10,8 +10,10 @@ const Home: React.FC = () => {
 
       <p>We let you play better</p>
 
-      <Link to="/general">
-        <Button>get started</Button>
+      <Link to="/general" style={{ textDecoration: 'none' }}>
+        <MuiButton variant="outlined" size="large">
+          get started
+        </MuiButton>
       </Link>
     </Container>
   )
