@@ -1,9 +1,10 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import AgentsInfo from '../views/AgentsInfo'
+import Agents from '../views/Agents'
+import InfoAgent from '../views/Agents/InfoAgent'
 import Home from '../views/Home'
 import Login from '../views/Login'
-import MapsInfo from '../views/MapsInfo'
-import WeaponsInfo from '../views/WeaponsInfo'
+import Maps from '../views/Maps'
+import Weapons from '../views/Weapons'
 import PageNotFound from '../views/PageNotFound'
 
 export const AppRoutes = () => {
@@ -12,9 +13,10 @@ export const AppRoutes = () => {
       <Route path="*" element={<Navigate to="/login" />} />
       <Route path="/login" element={<Login />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/maps" element={<MapsInfo />} />
-      <Route path="/agents" element={<AgentsInfo />} />
-      <Route path="/weapons" element={<WeaponsInfo />} />
+      <Route path="/maps" element={<Maps />} />
+      <Route path="/agents" element={<Agents />} />
+      <Route path="/agents/:agentUuid" element={<InfoAgent />} />
+      <Route path="/weapons" element={<Weapons />} />
       <Route path="/page-not-found" element={<PageNotFound />} />
     </Routes>
   )

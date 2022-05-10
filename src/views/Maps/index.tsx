@@ -6,11 +6,11 @@ import PageDefault from '../../components/PageDefault'
 import { Container } from './styles'
 import api from '../../services/api'
 
-interface MapsInfoProps {
+interface MapsProps {
   children?: ReactNode
 }
 
-function MapsInfo({ children }: MapsInfoProps) {
+function Maps({ children }: MapsProps) {
   const [data, setData] = useState([])
 
   useEffect(() => {
@@ -45,4 +45,4 @@ function MapsInfo({ children }: MapsInfoProps) {
   )
 }
 
-export default MapsInfo
+export default Maps

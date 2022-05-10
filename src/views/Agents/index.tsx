@@ -6,17 +6,17 @@ import PageDefault from '../../components/PageDefault'
 import { Container } from './styles'
 import api from '../../services/api'
 
-interface WeaponsInfoProps {
+interface AgentsProps {
   children?: ReactNode
 }
 
-function WeaponsInfo({ children }: WeaponsInfoProps) {
+function Agents({ children }: AgentsProps) {
   const [data, setData] = useState([])
 
   useEffect(() => {
     const dataMaps = async () => {
       await api
-        .get('/weapons')
+        .get('/agents')
         .then(response => {
           console.log(response)
           setData(response.data.data)
@@ -32,18 +32,20 @@ function WeaponsInfo({ children }: WeaponsInfoProps) {
   return (
     <PageDefault>
       <Container>
-        <Typography variant="h1">Weapons</Typography>
-        {data.map((item: any) => (
-          <SimpleCard
-            key={item.uuid}
-            displayName={item.displayName}
-            backgroundType="outlined"
-            background={item.displayIcon}
-          />
-        ))}
+        <Typography variant="h1">Agents</Typography>
+        {data.map((item: any) =>
+          item.fullPortraitV2 ? (
+            <SimpleCard
+              key={item.uuid}
+              displayName={item.displayName}
+              backgroundType="outlined"
+              background={item.fullPortraitV2}
+            />
+          ) : null
+        )}
       </Container>
     </PageDefault>
   )
 }
 
-export default WeaponsInfo
+export default Agents
