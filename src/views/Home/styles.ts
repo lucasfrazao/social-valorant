@@ -14,7 +14,7 @@ export const Container = styled.div`
   padding-right: 1.75rem;
 
   background-image: url(${backgroundImage});
-  background-size: contain;
+  background-size: cover;
 
   img {
     width: 100vw;
@@ -23,13 +23,12 @@ export const Container = styled.div`
   }
 
   p {
-    /* text-align: center; */
     font-family: 'Poppins';
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 3.4rem;
 
     margin-top: 3.125rem;
-    color: white;
+    color: #fffbf5;
   }
 `
 

@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
    }
 
    svg {
-       width: 1.125rem;
+       width: 1.5rem;
        height: auto;
 
        cursor: pointer;

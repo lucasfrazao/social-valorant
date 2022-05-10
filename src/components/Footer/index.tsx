@@ -3,11 +3,11 @@ import { Container } from './styles'
 
 import { FaHome, FaHeart, FaUserAlt } from 'react-icons/fa'
 
-interface NavbarProps {
+interface FooterProps {
   children?: ReactNode
 }
 
-const Navbar: React.FC<NavbarProps> = ({ children }) => {
+const Footer: React.FC<FooterProps> = ({ children }) => {
   return (
     <Container>
       <FaHome />
@@ -17,4 +17,4 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
   )
 }
 
-export default Navbar
+export default Footer

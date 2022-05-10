@@ -10,7 +10,7 @@ const Home: React.FC = () => {
 
       <p>We let you play better</p>
 
-      <Link to="/accounts">
+      <Link to="/general">
         <Button>get started</Button>
       </Link>
     </Container>
