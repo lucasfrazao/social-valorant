@@ -38,7 +38,7 @@ function SimpleBackdrop({ children }: SimpleBackdropProps) {
   const handleRedirect = () => {
     setOpen(false)
     setTimeout(() => {
-      window.open('https://playvalorant.com/pt-br/news/')
+      window.open('https://playvalorant.com/en-us/news/')
     }, 2000)
   }
 

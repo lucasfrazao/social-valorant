@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react'
 import Typography from '@material-ui/core/Typography'
-import CardSimple from '../../components/CardSimple'
+import SimpleCard from '../../components/SimpleCard'
 import PageDefault from '../../components/PageDefault'
 
 import { Container } from './styles'
@@ -35,7 +35,7 @@ function AgentsInfo({ children }: AgentsInfoProps) {
         <Typography variant="h1">Agents</Typography>
         {data.map((item: any) =>
           item.fullPortraitV2 ? (
-            <CardSimple
+            <SimpleCard
               key={item.uuid}
               displayName={item.displayName}
               backgroundType="outlined"

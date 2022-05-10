@@ -16,7 +16,7 @@ export const Container = styled.div`
 
   .group-buttons {
     margin-top: 2rem;
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

@@ -32,6 +32,25 @@ export const Container = styled.div`
         width: 1rem;
         fill: green;
       }
+
+      @keyframes fa-reg-dot-circle {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .fa-reg-dot-circle {
+        -webkit-animation: fa-reg-dot-circle 1s linear infinite;
+        -moz-animation: fa-reg-dot-circle 1s linear infinite;
+        -ms-animation: fa-reg-dot-circle 1s linear infinite;
+        -o-animation: fa-reg-dot-circle 1s linear infinite;
+        animation: fa-reg-dot-circle 1s linear infinite;
+      }
     }
   }
 

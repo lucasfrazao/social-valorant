@@ -4,6 +4,7 @@ import Home from '../views/Home'
 import Login from '../views/Login'
 import MapsInfo from '../views/MapsInfo'
 import WeaponsInfo from '../views/WeaponsInfo'
+import PageNotFound from '../views/PageNotFound'
 
 export const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ export const AppRoutes = () => {
       <Route path="/maps" element={<MapsInfo />} />
       <Route path="/agents" element={<AgentsInfo />} />
       <Route path="/weapons" element={<WeaponsInfo />} />
+      <Route path="/page-not-found" element={<PageNotFound />} />
     </Routes>
   )
 }

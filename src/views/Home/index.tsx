@@ -2,7 +2,7 @@ import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import { Link } from '@material-ui/core'
 import PageDefault from '../../components/PageDefault'
-import CardSimple from '../../components/CardSimple'
+import CardSimple from '../../components/SimpleCard'
 import { Container } from './styles'
 import { FaRegDotCircle } from 'react-icons/fa'
 
@@ -17,7 +17,7 @@ const Home: React.FC = () => {
             </Typography>
           </div>
           <div className="status-app">
-            <FaRegDotCircle />
+            <FaRegDotCircle className="fa-reg-dot-circle" />
             <Typography variant="body2">
               application under development
             </Typography>

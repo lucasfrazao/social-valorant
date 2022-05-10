@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 import { Container } from './styles'
+import { Link } from '@material-ui/core'
 
 import { FaHome, FaNewspaper, FaHeart, FaUserAlt } from 'react-icons/fa'
-import { Link } from '@material-ui/core'
 
 import SimpleBackdrop from '../SimpleBackdrop'
 interface FooterProps {
@@ -15,11 +15,18 @@ const Footer: React.FC<FooterProps> = ({ children }) => {
       <Link href="/login">
         <FaHome />
       </Link>
+
       <SimpleBackdrop>
         <FaNewspaper />
       </SimpleBackdrop>
-      <FaHeart />
-      <FaUserAlt />
+
+      <Link href="/page-not-found">
+        <FaHeart />
+      </Link>
+
+      <Link href="/page-not-found">
+        <FaUserAlt />
+      </Link>
     </Container>
   )
 }

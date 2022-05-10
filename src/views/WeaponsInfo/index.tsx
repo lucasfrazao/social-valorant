@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useState } from 'react'
 import Typography from '@material-ui/core/Typography'
-import CardSimple from '../../components/CardSimple'
+import SimpleCard from '../../components/SimpleCard'
 import PageDefault from '../../components/PageDefault'
 
 import { Container } from './styles'
@@ -34,7 +34,7 @@ function WeaponsInfo({ children }: WeaponsInfoProps) {
       <Container>
         <Typography variant="h1">Weapons</Typography>
         {data.map((item: any) => (
-          <CardSimple
+          <SimpleCard
             key={item.uuid}
             displayName={item.displayName}
             backgroundType="outlined"
