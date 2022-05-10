@@ -6,17 +6,17 @@ import PageDefault from '../../components/PageDefault'
 import { Container } from './styles'
 import api from '../../services/api'
 
-interface MapsInfoProps {
+interface WeaponsInfoProps {
   children?: ReactNode
 }
 
-function MapsInfo({ children }: MapsInfoProps) {
+function WeaponsInfo({ children }: WeaponsInfoProps) {
   const [data, setData] = useState([])
 
   useEffect(() => {
     const dataMaps = async () => {
       await api
-        .get('/maps')
+        .get('/weapons')
         .then(response => {
           console.log(response)
           setData(response.data.data)
@@ -32,12 +32,13 @@ function MapsInfo({ children }: MapsInfoProps) {
   return (
     <PageDefault>
       <Container>
-        <Typography variant="h1">Maps</Typography>
-        {data?.map((item: any) => (
+        <Typography variant="h1">Weapons</Typography>
+        {data.map((item: any) => (
           <CardSimple
-            backgroundType="filled"
+            key={item.uuid}
             displayName={item.displayName}
-            background={item.splash}
+            backgroundType="outlined"
+            background={item.displayIcon}
           />
         ))}
       </Container>
@@ -45,4 +46,4 @@ function MapsInfo({ children }: MapsInfoProps) {
   )
 }
 
-export default MapsInfo
+export default WeaponsInfo

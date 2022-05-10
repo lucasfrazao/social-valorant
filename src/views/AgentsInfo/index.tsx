@@ -6,17 +6,17 @@ import PageDefault from '../../components/PageDefault'
 import { Container } from './styles'
 import api from '../../services/api'
 
-interface MapsInfoProps {
+interface AgentsInfoProps {
   children?: ReactNode
 }
 
-function MapsInfo({ children }: MapsInfoProps) {
+function AgentsInfo({ children }: AgentsInfoProps) {
   const [data, setData] = useState([])
 
   useEffect(() => {
     const dataMaps = async () => {
       await api
-        .get('/maps')
+        .get('/agents')
         .then(response => {
           console.log(response)
           setData(response.data.data)
@@ -32,17 +32,20 @@ function MapsInfo({ children }: MapsInfoProps) {
   return (
     <PageDefault>
       <Container>
-        <Typography variant="h1">Maps</Typography>
-        {data?.map((item: any) => (
-          <CardSimple
-            backgroundType="filled"
-            displayName={item.displayName}
-            background={item.splash}
-          />
-        ))}
+        <Typography variant="h1">Agents</Typography>
+        {data.map((item: any) =>
+          item.fullPortraitV2 ? (
+            <CardSimple
+              key={item.uuid}
+              displayName={item.displayName}
+              backgroundType="outlined"
+              background={item.fullPortraitV2}
+            />
+          ) : null
+        )}
       </Container>
     </PageDefault>
   )
 }
 
-export default MapsInfo
+export default AgentsInfo

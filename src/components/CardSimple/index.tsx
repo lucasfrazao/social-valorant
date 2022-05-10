@@ -1,20 +1,18 @@
-import { Link } from '@material-ui/core'
-import Button from '@material-ui/core/Button'
-
 import { PaperMui, CardMui } from './styles'
 
 interface CardSimpleProps {
   displayName?: string
-  splash?: string
+  background?: string
+  backgroundType?: 'filled' | 'outlined' | undefined
 }
 
-function CardSimple({ displayName, splash }: CardSimpleProps) {
-  // const handleClick = () => {
-  //   window.location.href = 'https://www.riotgames.com/en'
-  // }
-
+function CardSimple({
+  displayName,
+  background,
+  backgroundType
+}: CardSimpleProps) {
   return (
-    <PaperMui splash={splash}>
+    <PaperMui background={background} backgroundType={backgroundType}>
       <CardMui>
         <p>{displayName}</p>
       </CardMui>
