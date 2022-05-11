@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import PageDefault from '../../components/PageDefault'
 import { Container } from './styles'
 import Button from '@material-ui/core/Button'
+import Loader from '../../components/Loader'
 
 interface PageNotFoundProps {
   children?: ReactNode

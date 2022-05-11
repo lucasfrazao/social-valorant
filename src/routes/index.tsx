@@ -15,7 +15,7 @@ export const AppRoutes = () => {
       <Route path="/home" element={<Home />} />
       <Route path="/maps" element={<Maps />} />
       <Route path="/agents" element={<Agents />} />
-      <Route path="/agents/:agentUuid" element={<InfoAgent />} />
+      <Route path="/agents/:uuid" element={<InfoAgent />} />
       <Route path="/weapons" element={<Weapons />} />
       <Route path="/page-not-found" element={<PageNotFound />} />
     </Routes>

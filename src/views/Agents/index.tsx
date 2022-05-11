@@ -1,10 +1,13 @@
 import { ReactNode, useEffect, useState } from 'react'
 import Typography from '@material-ui/core/Typography'
+import Link from '@material-ui/core/Link'
 import SimpleCard from '../../components/SimpleCard'
 import PageDefault from '../../components/PageDefault'
 
 import { Container } from './styles'
 import api from '../../services/api'
+import { useParams } from 'react-router-dom'
+import Loader from '../../components/Loader'
 
 interface AgentsProps {
   children?: ReactNode
@@ -35,12 +38,13 @@ function Agents({ children }: AgentsProps) {
         <Typography variant="h1">Agents</Typography>
         {data.map((item: any) =>
           item.fullPortraitV2 ? (
-            <SimpleCard
-              key={item.uuid}
-              displayName={item.displayName}
-              backgroundType="outlined"
-              background={item.fullPortraitV2}
-            />
+            <Link href={`/agents/${item.uuid}`}>
+              <SimpleCard
+                displayName={item.displayName}
+                backgroundType="outlined"
+                background={item.fullPortraitV2}
+              />
+            </Link>
           ) : null
         )}
       </Container>

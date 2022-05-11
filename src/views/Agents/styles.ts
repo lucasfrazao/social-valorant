@@ -17,4 +17,8 @@ export const Container = styled.div`
     background-size: cover;
     background-position: top;
   }
+
+  .MuiPaper-root:hover {
+    opacity: 0.7;
+  }
 `

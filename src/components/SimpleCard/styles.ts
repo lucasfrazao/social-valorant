@@ -9,7 +9,7 @@ interface CardSimpleProps {
 
 export const PaperMui = styled(Paper)<CardSimpleProps>`
   width: 100%;
-  min-width: 20rem;
+  min-width: 19rem;
   height: 11.5rem;
   display: flex;
   align-items: flex-end;

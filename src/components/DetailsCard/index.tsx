@@ -6,7 +6,6 @@ import { Container } from './styles'
 interface DetailsCardProps {
   children?: ReactNode
   imageAgent?: string
-  displayName?: string
   description?: string
   displayIcon?: string
   role?: string
@@ -15,15 +14,12 @@ interface DetailsCardProps {
 function DetailsCard({
   children,
   imageAgent,
-  displayName,
   description,
   displayIcon,
   role
 }: DetailsCardProps) {
   return (
     <Container>
-      <Typography variant="h2">{displayName}</Typography>
-
       <div className="main-container">
         <img src={imageAgent} alt="" />
         <div className="container-info">
